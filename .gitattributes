@@ -1,0 +1,6 @@
+data/input/*.csv filter=lfs diff=lfs merge=lfs -text
+data/output/*.parquet filter=lfs diff=lfs merge=lfs -text
+data/input/Tags.csv filter=lfs diff=lfs merge=lfs -text
+data/input/Answers.csv filter=lfs diff=lfs merge=lfs -text
+data/input/Questions.csv filter=lfs diff=lfs merge=lfs -text
+data/output/StackOverflow.parquet filter=lfs diff=lfs merge=lfs -text
