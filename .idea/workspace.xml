@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1d4c4-aad3-4493-b100-704bc9fd3605" name="Changes" comment="feat/entrenamiento completado" />
+    <list default="true" id="78c1d4c4-aad3-4493-b100-704bc9fd3605" name="Changes" comment="feat: add CSV file attributes and update workspace configuration">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA/EDAStackOverFlow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/EDAStackOverFlow.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocesado/cleaning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/preprocesado/cleaning.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,18 +18,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Camilo7203"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Camilo7203&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Camilo7203/pruebaTecnicaNequi.git",
-    "accountId": "563ba487-6333-43d5-8f35-8ab547349baa"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Camilo7203/pruebaTecnicaNequi.git&quot;,
+    &quot;accountId&quot;: &quot;563ba487-6333-43d5-8f35-8ab547349baa&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -33,32 +38,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/USUARIO/PycharmProjects/pruebaTecnicaNequiML/training",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USUARIO/PycharmProjects/pruebaTecnicaNequiML&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML" />
       <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\training" />
       <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\preprocesado" />
       <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\EDA" />
       <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\data\input" />
       <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML" />
+      <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\data\input" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -78,7 +85,8 @@
       <updated>1747368727452</updated>
       <workItem from="1747368728665" duration="2778000" />
       <workItem from="1747502690871" duration="403000" />
-      <workItem from="1747661062022" duration="9133000" />
+      <workItem from="1747661062022" duration="12090000" />
+      <workItem from="1747675357475" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="feat/entrenamiento completado">
       <option name="closed" value="true" />
