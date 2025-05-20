@@ -73,9 +73,9 @@ Como propuesta de monitoreo y seguridad del modelo, se recomienda implementar la
    - Ingesta (S3 Raw_data):  
      - Nº de archivos recibidos.  
      - % de objetos rechazados por formato o tamaño.  
-   - ETL (AWS Glue/Lambda):  
+   - ETL (AWS Glue/StepFunctions):  
      - Jobs completados vs. fallidos.  
-     - Tiempo medio de ejecución y variabilidad respecto al baseline.  
+     - Tiempo medio de ejecución.  
    - Entrenamiento (SageMaker):  
      - Estado de los Training Jobs (Completed/Failed).  
      - Uso de CPU/GPU y memoria.  
