@@ -8,13 +8,13 @@
 6. Realizar una propuesta de monitoreo y seguridad del modelo.  
 
 # Paso 2: Explorar y evaluar los datos, el EDA  
-En el notebook llamado “Paso2.ipynb” se llevaron a cabo los siguientes pasos:  
+En el notebook llamado “EDA/EDAStackOverFlow.ipynb” se llevaron a cabo los siguientes pasos:  
 1. Definición de funciones.  
 2. Lectura de los datos.  
 3. Exploración de los datos.  
 4. Revisión de la calidad de los datos.  
 
-Estos pasos los explico a detalle dentro del archivo “Paso2.ipynb”.  
+Estos pasos los explico a detalle dentro del archivo “EDA/EDAStackOverFlow.ipynb”.  
 
 # Paso 3: Definir el modelo de datos  
 1. Trazar el modelo de datos conceptual y explicar por qué se eligió ese modelo.  
@@ -40,13 +40,13 @@ Estos pasos los explico a detalle dentro del archivo “Paso2.ipynb”.
 # Paso 4: Ejecutar la ETL  
 Para la ejecución del ETL, guardé los datos en un bucket S3.  
 ![img_3.png](Imagenes/img_3.png)  
-Luego hice un trabajo de Glue en Spark para que éste limpiara los datos y los dejara listos para el entrenamiento del modelo.  
+Luego hice un job en Spark para que éste limpiara los datos y los dejara listos para el entrenamiento del modelo.  
 ![img_4.png](Imagenes/img_4.png)  
-
+El codigo del GlueJob está en el archivo glue/etlGlue.py
 # Paso 5: Entrenar, evaluar y desplegar el modelo  
 Utilizamos un notebook de SageMaker para realizar todo el entrenamiento, evaluación y despliegue del modelo.  
 
-El código está en el archivo train.ipynb, en el cual se entrena un modelo de clasificación de texto. El modelo se entrena con los datos de preguntas y etiquetas extraídos del conjunto de datos de Stack Overflow. Se utiliza la biblioteca scikit-learn para dividir los datos en conjuntos de entrenamiento y prueba.  
+El código está en el archivo "sageMakerTraining/train.ipynb", en el cual se entrena un modelo de clasificación de texto. El modelo se entrena con los datos de preguntas y etiquetas extraídos del conjunto de datos de Stack Overflow. Se utiliza la biblioteca scikit-learn para dividir los datos en conjuntos de entrenamiento y prueba.  
 ![img_7.png](Imagenes/img_7.png)  
 
 Guardamos los artefactos del modelo en S3.  

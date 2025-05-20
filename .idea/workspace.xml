@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="78c1d4c4-aad3-4493-b100-704bc9fd3605" name="Changes" comment="feat: add CSV file attributes and update workspace configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal/etl glue.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinal/etlGlue.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +66,9 @@
       <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\Imagenes" />
+      <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\sageMakerTraining" />
       <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML" />
+      <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\Imagenes" />
       <recent name="C:\Users\USUARIO\PycharmProjects\pruebaTecnicaNequiML\data\input" />
     </key>
   </component>
@@ -89,7 +91,7 @@
       <workItem from="1747502690871" duration="403000" />
       <workItem from="1747661062022" duration="12090000" />
       <workItem from="1747675357475" duration="316000" />
-      <workItem from="1747743400583" duration="7147000" />
+      <workItem from="1747743400583" duration="7752000" />
     </task>
     <task id="LOCAL-00001" summary="feat/entrenamiento completado">
       <option name="closed" value="true" />
