@@ -1,11 +1,11 @@
 # Paso 1: Alcance del proyecto y captura de datos  
 1. Identificar y recopilar los datos que usarás para tu proyecto.  
-   El DataSet seleccionado es StackSample: 10% of Stack Overflow Q&A Data, que contiene preguntas y respuestas de Stack Overflow. Este conjunto de datos es ideal para el análisis de texto y la clasificación de preguntas y respuestas.  (Paso 2)
-2. Limpiar los datos para dejarlos disponibles para entrenar un modelo de Machine learning que prediga las tags de la pregunta con base en su contenido.  (Paso 4)
-3. Entrenar el modelo de machine learning del punto anterior.  (Paso 5)
-4. Evaluar este modelo.  (Paso 5)
-5. Desplegar el modelo en un entorno de producción.  (Paso 5)
-6. Realizar una propuesta de monitoreo y seguridad del modelo.  (Paso 6)
+   El DataSet seleccionado es StackSample: 10% of Stack Overflow Q&A Data, que contiene preguntas y respuestas de Stack Overflow. Este conjunto de datos es ideal para el análisis de texto y la clasificación de preguntas y respuestas. (Paso 2)
+2. Limpiar los datos para dejarlos disponibles para entrenar un modelo de Machine learning que prediga las tags de la pregunta con base en su contenido. (Paso 4)
+3. Entrenar el modelo de machine learning del punto anterior. (Paso 5)
+4. Evaluar este modelo. (Paso 5)
+5. Desplegar el modelo en un entorno de producción. (Paso 5)
+6. Realizar una propuesta de monitoreo y seguridad del modelo. (Paso 6)
 
 # Paso 2: Explorar y evaluar los datos, el EDA  
 En el notebook llamado “EDA/EDAStackOverFlow.ipynb” se llevaron a cabo los siguientes pasos:  
@@ -29,8 +29,8 @@ Estos pasos los explico a detalle dentro del archivo “EDA/EDAStackOverFlow.ipy
    Por otro lado, respecto a las tecnologías y herramientas utilizadas:  
    - Amazon S3: Almacenamiento de datos en la nube que es muy eficiente y tiene un costo bajo.  
    - Amazon SageMaker: Plataforma de machine learning para entrenar y desplegar modelos que brinda muchas facilidades para el desarrollo ML.  
-   - Amazon Glue: Servicio de ETL (Extracción, Transformación y Carga) para preparar los datos de forma serveless sin tener que preocuparme de la infraestructura.  
-   - Amazon StepFunctions: Orquestación de flujos de trabajo de forma visual y facil, otra buena opcion puede ser lambda pero por la sencilles de la prueba tecnica opte por esta opcion.  
+   - Amazon Glue: Servicio de ETL (Extracción, Transformación y Carga) para preparar los datos de forma serverless sin tener que preocuparme de la infraestructura.  
+   - Amazon StepFunctions: Orquestación de flujos de trabajo de forma visual y fácil, otra buena opción puede ser lambda, pero por la sencillez de la prueba técnica opté por esta opción.  
    - Amazon EventBridge: Servicio de mensajería y eventos que nos permite disparar las stepfunctions.  
 
    Todas estas tecnologías se complementan bien para generar un flujo de ML simple.  
@@ -40,26 +40,28 @@ Estos pasos los explico a detalle dentro del archivo “EDA/EDAStackOverFlow.ipy
 # Paso 4: Ejecutar la ETL  
 Para la ejecución del ETL, guardé los datos en un bucket S3.  
 ![img_3.png](Imagenes/img_3.png)  
-Luego hice un job en Spark para que éste limpiara los datos y los dejara listos para el entrenamiento del modelo.  
+Luego hice un job en Spark para que este limpiara los datos y los dejara listos para el entrenamiento del modelo.  
 ![img_4.png](Imagenes/img_4.png)  
-El codigo del GlueJob está en el archivo glue/etlGlue.py
+El código del GlueJob está en el archivo glue/etlGlue.py
 # Paso 5: Entrenar, evaluar y desplegar el modelo  
 Utilizamos un notebook de SageMaker para realizar todo el entrenamiento, evaluación y despliegue del modelo.  
 
 El código está en el archivo "sageMakerTraining/train.ipynb", en el cual se entrena un modelo de clasificación de texto. El modelo se entrena con los datos de preguntas y etiquetas extraídos del conjunto de datos de Stack Overflow. Se utiliza la biblioteca scikit-learn para dividir los datos en conjuntos de entrenamiento y prueba.  
-![img_7.png](Imagenes/img_7.png)  
+![img_7.png](Imagenes/img_7.png) 
 
+En el archivo "sageMakerTraining/inference.ipybn" se encuentra el código para realizar la inferencia del modelo. Para esto preparé un dataset que está en "data/output/muestra100Preguntas.parquet" y el modelo entrenado en el paso anterior.
+![img.png](Imagenes/img20.png)
 Guardamos los artefactos del modelo en S3.  
 ![img_8.png](Imagenes/img_8.png)  
 
-Realizamos un pipeline con la ejecución del notebook de entrenamiento para que éste se ejecute cada vez que se necesite.  
+Realizamos un pipeline con la ejecución del notebook de entrenamiento para que este se ejecute cada vez que se necesite.  
 ![img_9.png](Imagenes/img_9.png)  
 
-Utilizamos una StepFunction para orquestar el flujo de trabajo y que éste se ejecute cada vez que se necesite realizar un entrenamiento.  
+Utilizamos una StepFunction para orquestar el flujo de trabajo y que este se ejecute cada vez que se necesite realizar un entrenamiento.  
 ![img_10.png](Imagenes/img_10.png)  
 ![img_11.png](Imagenes/img_11.png)  
 
-Utilizamos una StepFunction para orquestar el flujo de trabajo y que éste se ejecute cada vez que se necesite realizar una inferencia en batch.  
+Utilizamos una StepFunction para orquestar el flujo de trabajo y que este se ejecute cada vez que se necesite realizar una inferencia en batch.  
 ![img_12.png](Imagenes/img_12.png)  
 
 Para el versionamiento del código del notebook se utiliza Git y GitHub directamente desde el notebook. Adicionalmente, los buckets de S3 están totalmente versionados, por lo que siempre se podrá acceder a la versión de los datos que se usaron para entrenar el modelo.  
@@ -71,13 +73,13 @@ Como propuesta de monitoreo y seguridad del modelo, se recomienda implementar la
 
 1. **Monitoreo operativo:**  
    - Ingesta (S3 Raw_data):  
-     - Nº de archivos recibidos: Permite verificar que la ingesta cumple con el volumen esperado y detectar caídas o picos inusuales (por ejemplo, generación masiva de datos corruptos), facilitando una respuesta rápida. 
+     - Número de archivos recibidos: Permite verificar que la ingesta cumple con el volumen esperado y detectar caídas o picos inusuales (por ejemplo, generación masiva de datos corruptos), facilitando una respuesta rápida. 
    - ETL (AWS Glue/StepFunctions):  
      - Jobs completados vs. fallidos: Mide la fiabilidad del pipeline. Un ratio de fallos elevado indica errores recurrentes en scripts, permisos o esquemas, y ayuda a priorizar correcciones.
      - Tiempo medio de ejecución: Detecta degradaciones de rendimiento y permite dimensionar recursos (número de DPUs, concurrencia) para cumplir con SLA de latencia.
    - Entrenamiento (SageMaker):  
      - Estado de los Training Jobs (Completed/Failed): Ofrece visibilidad sobre la frecuencia de fallos de entrenamiento (p. ej. por datos corruptos o hiperparámetros inválidos) y acelera el diagnóstico. 
-     - Uso de CPU/GPU y memoria: Informa sobre la eficiencia del cluster de entrenamiento. Si el GPU está infrautilizado o la CPU saturada, se pueden ajustar instancias o batch sizes para optimizar costes y tiempos.
+     - Uso de CPU/GPU y memoria: Informa sobre la eficiencia del cluster de entrenamiento. Si la GPU está infrautilizado o la CPU saturada, se pueden ajustar instancias o batch sizes para optimizar costes y tiempos.
    - Model Registry:  
      - Nuevas versiones registradas: Documenta cada cambio en el modelo (dataset, parámetros, métricas) para auditoría y reproducibilidad, facilitando rollback si es necesario.  
      - Promociones a “producción” vs. “staging”: Controla el flujo de validación: asegura que solo modelos testeados y aprobados lleguen a producción, reduciendo el riesgo de degradación en entorno real.
@@ -96,7 +98,7 @@ Como propuesta de monitoreo y seguridad del modelo, se recomienda implementar la
      - Alarma: GlueJobFailed > 0 → SNS + PagerDuty.  
      - Acción automática: StepFunction reintenta job.  
    - Training Job FAIL o muy lento:  
-     - motivo : Detecta problemas en el entrenamiento (p. ej. datos corruptos, hiperparámetros inválidos) y permite una respuesta rápida para evitar caídas en el pipeline.
+     - Motivo: Detecta problemas en el entrenamiento (p. ej. datos corruptos, hiperparámetros inválidos) y permite una respuesta rápida para evitar caídas en el pipeline.
      - Alarma: SageMakerTrainingJobFailed o duración > 2× baseline → SNS.  
    - Data drift detectado (Model Monitor):  
      - Motivo: Detecta cambios en la distribución de datos de entrada (p. ej. cambios en el comportamiento del usuario) y permite una respuesta rápida para evitar caídas en el pipeline.
