@@ -5,10 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c1d4c4-aad3-4493-b100-704bc9fd3605" name="Changes" comment="feat: add CSV file attributes and update workspace configuration">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EDA/EDAStackOverFlow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/EDAStackOverFlow.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/modelo_logreg.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/models/modelo_logreg.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/multilabel_binarizer.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/models/multilabel_binarizer.joblib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/vectorizer_tfidf.joblib" beforeDir="false" afterPath="$PROJECT_DIR$/models/vectorizer_tfidf.joblib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preprocesado/cleaning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/preprocesado/cleaning.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training/training.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/training/training.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +56,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2xA6rCCic3hLDbl6YnegXb0qtVt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -87,6 +112,7 @@
       <workItem from="1747502690871" duration="403000" />
       <workItem from="1747661062022" duration="12090000" />
       <workItem from="1747675357475" duration="316000" />
+      <workItem from="1747743400583" duration="6139000" />
     </task>
     <task id="LOCAL-00001" summary="feat/entrenamiento completado">
       <option name="closed" value="true" />
