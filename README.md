@@ -29,8 +29,11 @@ Por otro lado respecto a las tecnologías y herramientas utilizadas
    - Amazon StepFunctions: Orquestación de flujos de trabajo.
    - Amazon EventBridge: Servicio de mensajería y eventos.
 
-Todas estas tecnologias se complementan bien para generar un flujo de ML simple
+   Todas estas tecnologias se complementan bien para generar un flujo de ML simple
+
+
 4. Esta implementacion nos permite entrenar un modelo de ML siempre que se tengan nuevos datos en el bucket de raw_data, mientras que cuando se necesite realziar alguna inferencia se puede cargar los datos a el bucket de inference
+
 # Paso 4: Ejecutar la ETL
 Para la ejecución del ETL guarde los datos en un bucket S3.
 ![img_3.png](Imagenes/img_3.png)
