@@ -137,8 +137,8 @@ Como propuesta de monitoreo y seguridad del modelo, se recomienda implementar la
 
   - Model Monitor para drift de datos y predicciones.
 
-  - Resiliencia y recuperación:
-    - Orquestación con Step Functions usando retry y catch.
+- Resiliencia y recuperación:
+  - Orquestación con Step Functions usando retry y catch.
 
 Versionado estricto de código y artefactos (CodeCommit/CodePipeline).
 # Paso 7: Completar la redacción del proyecto
