@@ -155,7 +155,7 @@ Resumen de logros:
 - Entrenamiento y despliegue continuo de un clasificador de tags con SageMaker.
 
 - Orquestación completa (EventBridge → Step Functions → Glue/SageMaker).
-- 
+
 Impacto esperado:
 - Reducción de esfuerzo manual en preparación e inferencia.
 - Mayor fiabilidad gracias a métricas, alarmas y rollbacks automáticos.
